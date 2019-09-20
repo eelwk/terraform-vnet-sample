@@ -29,4 +29,5 @@ resource "azurerm_function_app" "dev" {
   resource_group_name       = "${azurerm_resource_group.dev.name}"
   app_service_plan_id       = "${azurerm_app_service_plan.dev.id}"
   storage_connection_string = "${azurerm_storage_account.dev.primary_connection_string}"
+  version                   = "~2"
 }
