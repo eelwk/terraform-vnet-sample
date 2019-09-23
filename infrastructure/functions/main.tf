@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "dev" {
 }
 
 resource "azurerm_storage_account" "dev" {
-  name                     = "functionsappdevstorage"
+  name                     = "${var.storageaccount}"
   resource_group_name      = "${azurerm_resource_group.dev.name}"
   location                 = "${azurerm_resource_group.dev.location}"
   account_tier             = "Standard"
