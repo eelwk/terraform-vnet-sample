@@ -1,3 +1,16 @@
+provider "azurerm" {
+  # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
+  version = "=1.33.0"
+}
+
+terraform {
+  backend "azurerm" {
+    storage_account_name  = "wbtestterraformstorage"
+    container_name        = "tfstate"
+    key                   = "terraform.tfstate"
+   }
+}
+
 resource "azurerm_resource_group" "dev" {
   name     = "${var.prefix}-rg"
   location = "${var.location}"

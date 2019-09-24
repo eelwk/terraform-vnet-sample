@@ -1,6 +1,6 @@
 variable "prefix" {
   description = "The Prefix used for all resources in this example. Example: wb-test"
-  default = "wb-test"
+  default = "wb-testtest"
 }
 
 variable "location" {
@@ -10,5 +10,5 @@ variable "location" {
 
 variable "storageaccount" {
   description = "The storage account the function app should use"
-  default = "West US"
+  default = "wbtestterraformstorage"
 }
