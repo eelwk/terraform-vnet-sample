@@ -7,7 +7,7 @@ provider "azurerm" {
 terraform {
   backend "azurerm" {
     storage_account_name  = "wbtestterraformstorage"
-    container_name        = "tfstate-function"
+    container_name        = "function"
     key                   = "terraform.tfstate"
    }
 }

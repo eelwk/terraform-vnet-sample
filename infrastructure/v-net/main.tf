@@ -7,7 +7,7 @@ provider "azurerm" {
 terraform {
   backend "azurerm" {
     storage_account_name  = "wbtestterraformstorage"
-    container_name        = "tfstate-vnet"
+    container_name        = "vnet"
     key                   = "terraform.tfstate"
    }
 }
