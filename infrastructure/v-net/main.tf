@@ -3,10 +3,11 @@ provider "azurerm" {
   version = "=1.33.0"
 }
 
+# when running this locally, run this: terraform init -backend-config="access_key=changeme"
 terraform {
   backend "azurerm" {
     storage_account_name  = "wbtestterraformstorage"
-    container_name        = "tfstate"
+    container_name        = "tfstate-vnet"
     key                   = "terraform.tfstate"
    }
 }
